@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import { ButtonsBlock, Button } from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ options, onFeedback }) => {
-  // console.log(options);
   return (
     <ButtonsBlock>
     

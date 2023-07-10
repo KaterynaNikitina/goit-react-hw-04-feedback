@@ -2,8 +2,10 @@ import PropTypes from 'prop-types';
 import { ButtonsBlock, Button } from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ options, onFeedback }) => {
+  console.log(options);
   return (
     <ButtonsBlock>
+    
        {options.map(option => {
         return (
           <li key={option}>
@@ -18,7 +20,6 @@ const FeedbackOptions = ({ options, onFeedback }) => {
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
-  good: PropTypes.number,
-  neutral: PropTypes.number,
-  bad: PropTypes.number,
-};
+  options: PropTypes.arrayOf(PropTypes.string),
+  onFeedback: PropTypes.func.isRequired
+}
